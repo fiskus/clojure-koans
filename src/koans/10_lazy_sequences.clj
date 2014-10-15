@@ -25,4 +25,4 @@
 
   "Iteration can be used for repetition"
   (= (repeat 100 :foo)
-     (take 100 (iterate key :foo))))
+     (take 100 (iterate keyword :foo))))
