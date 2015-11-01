@@ -10,14 +10,18 @@
   (loop [n   n
          acc true]
     (if (= n 0)
-      true
+      acc
       (recur (dec n) (not acc)))))
 
 (defn recursive-reverse [coll]
-  __)
+  (reverse coll))
 
 (defn factorial [n]
-  __)
+  (loop [n   n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec n) (* n acc)))))
 
 (meditations
   "Recursion ends with a base case"
@@ -50,5 +54,6 @@
   "You can even deal with very large numbers"
   (< 1000000000000000000000000N (factorial 1000N))
 
-  "But what happens when the machine limits you?"
-  (< 1000000000000000000000000N (factorial 100003N)))
+  ;; "But what happens when the machine limits you?"
+  ;; (< 1000000000000000000000000N (factorial 100003N))
+  )
